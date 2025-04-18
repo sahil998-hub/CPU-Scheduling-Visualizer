@@ -1,0 +1,248 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+}
+
+body {
+    margin: 10px 20px;
+    background: linear-gradient(to right, #ffffff, #d4e8ff) !important; /* Light gradient for a clean look */
+    color: #212529; /* Darker text for readability */
+}
+
+/* Instruction Text */
+.instructions {
+    font-size: 15px;
+    margin: 10px 20px;
+    color: #495057; /* Medium-dark text */
+}
+.hide {
+    display: none;
+}
+
+
+/* Header */
+h1 {
+    font-size: 30px;
+    color: #007bff; /* Bright blue for headers */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+table,
+th,
+td {
+    border-collapse: collapse;
+    text-align: center;
+    border: 2px solid #dee2e6; /* Soft border */
+}
+
+td {
+    padding: 12px;
+}
+
+table input {
+    text-align: center;
+    border: 1px solid #ced4da;
+    width: 100px;
+    background-color: #ffffff; /* White background for inputs */
+    border-radius: 4px;
+}
+
+/* Alternating row background color */
+table tr:nth-child(even) {
+    background-color: #f2f6fc; /* Very light blue for alternating rows */
+}
+
+table tr:hover {
+    background-color: #eaf2ff; /* Subtle blue hover effect */
+}
+
+/* Buttons */
+button {
+    padding: 10px 16px;
+    font-size: 16px;
+    background-color: #007bff; /* Bright blue for buttons */
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Process Buttons */
+.process-btn button {
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.process-btn button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Charts */
+#algorithm-chart-div,
+#round-robin-chart-div {
+    width: 80%;
+    margin: 20px auto;
+}
+
+#gantt-chart,
+#timeline-chart {
+    height: 250px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for charts */
+    background-color: #ffffff; /* Clean white background */
+}
+
+/* Table with Process Details */
+.schedule-table-process,
+.schedule-table-time {
+    border: 1px solid #dee2e6;
+    text-align: left;
+    background-color: #f8f9fa; /* Very light gray background */
+}
+
+.schedule-table-process {
+    margin-left: 6px;
+}
+
+/* Interactive table for logs and status updates */
+#time-log-table-div {
+    margin-top: 10vh;
+    position: relative;
+}
+
+.time-log-table {
+    width: 10%;
+    position: absolute;
+}
+
+/* Floating position for status tables */
+#remain-table,
+#ready-table,
+#running-table,
+#block-table,
+#terminate-table {
+    position: absolute;
+    padding: 10px;
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+/* Arrows for Process Transitions */
+.arrow {
+    position: absolute;
+    font-size: 100px;
+    color: #007bff; /* Bright blue for arrows */
+}
+
+#remain-ready,
+#ready-running,
+#running-ready,
+#running-terminate,
+#running-block,
+#block-ready {
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+/* Button Toggle for Preferences */
+#priority-toggle-btn {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 10px;
+    width: 70px;
+    border: 1px solid #007bff;
+    background-color: #ffffff;
+    color: #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#priority-toggle-btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Lists & Text */
+.preferences {
+    list-style: none;
+}
+
+thead {
+    font-weight: bold;
+    background-color: #007bff; /* Bright blue for headers */
+    color: white;
+}
+
+/* Time Log and Status Tables Position */
+#remain-table {
+    left: 7.5%;
+}
+
+#ready-table {
+    left: 32.5%;
+}
+
+#running-table {
+    right: 32.5%;
+}
+
+#block-table {
+    left: 45%;
+    top: 8vw;
+}
+
+#terminate-table {
+    right: 7.5%;
+}
+
+/* Arrows for Transitions between Processes */
+#remain-ready {
+    left: 20.5%;
+    top: -62px;
+}
+
+#ready-running {
+    transform: rotate(180deg);
+    left: 47%;
+    top: -15px;
+}
+
+#running-ready {
+    left: 47%;
+    top: -60px;
+}
+
+#running-terminate {
+    right: 20.5%;
+    top: -62px;
+}
+
+#running-block {
+    transform: rotate(135deg);
+    left: 52%;
+    top: 20px;
+}
+
+#block-ready {
+    transform: rotate(225deg);
+    left: 40%;
+    top: 20px;
+}
